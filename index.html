@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101522">
+  <meta name="description" content="بازی بلوکی و کتابخانه پرامپت‌های هوش مصنوعی">
+  <title>محمد احسنی | بازی و پرامپت‌های هوش مصنوعی</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">م</span><span>محمد احسنی</span></a>
+    <nav><a href="#game">بازی</a><a href="#prompts">پرامپت‌ها</a></nav>
+    <button class="menu-btn" id="menuBtn" aria-label="باز کردن منو">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">فضای بازی و هوش مصنوعی</span>
+        <h1>بازی کن، <span>ایده بساز</span>.</h1>
+        <p>یک بازی فکری بلوکی در کنار مجموعه‌ای از پرامپت‌های کاربردی هوش مصنوعی؛ همه در یک جای ساده و فارسی.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#game">شروع بازی</a><a class="secondary-btn" href="#prompts">دیدن پرامپت‌ها</a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="float-block b1"></div><div class="float-block b2"></div><div class="float-block b3"></div>
+        <div class="art-caption">PLAY · CREATE · LEARN</div>
+      </div>
+    </section>
+
+    <section class="section" id="game">
+      <div class="section-heading"><div><span class="eyebrow">بازی اختصاصی سایت</span><h2>پازل بلوکی</h2></div><span class="tag">نسخه آزمایشی ۱.۰</span></div>
+      <div class="game-layout">
+        <div class="game-panel">
+          <div class="game-top"><div><small>امتیاز</small><strong id="score">۰</strong></div><div><small>رکورد این دستگاه</small><strong id="best">۰</strong></div><button class="restart-btn" id="restart">شروع دوباره ↻</button></div>
+          <div id="board" class="board" role="grid" aria-label="صفحه بازی ۱۰ در ۱۰"></div>
+          <div class="pieces-area"><p>یکی از قطعه‌ها را انتخاب کن و روی صفحه قرار بده</p><div id="pieces" class="pieces"></div></div>
+          <p class="game-message" id="gameMessage" aria-live="polite">ردیف یا ستون را کامل کن تا پاک شود!</p>
+        </div>
+        <aside class="how-panel"><div class="how-icon">▦</div><h3>چطور بازی کنیم؟</h3><ol><li>یکی از سه قطعه پایین را انتخاب کن.</li><li>خانه‌های موردنظر را روی صفحه لمس کن.</li><li>با کامل‌کردن ردیف یا ستون، خانه‌ها پاک می‌شوند.</li><li>تا جایی که می‌توانی امتیاز بگیر!</li></ol><p class="note">این بازی یک پیاده‌سازی مستقل با الهام از سبک پازل‌های بلوکی است.</p></aside>
+      </div>
+    </section>
+
+    <section class="section prompts-section" id="prompts">
+      <div class="section-heading"><div><span class="eyebrow">جعبه ابزار هوش مصنوعی</span><h2>کتابخانه پرامپت‌ها</h2></div><span class="tag">قابل کپی</span></div>
+      <div class="prompt-tools"><input id="searchInput" type="search" placeholder="جست‌وجو در پرامپت‌ها..." aria-label="جست‌وجوی پرامپت"><div class="filters" id="filters"><button class="filter active" data-category="همه">همه</button><button class="filter" data-category="یادگیری">یادگیری</button><button class="filter" data-category="برنامه‌نویسی">برنامه‌نویسی</button><button class="filter" data-category="تصویرسازی">تصویرسازی</button><button class="filter" data-category="پژوهش">پژوهش</button></div></div>
+      <div id="promptGrid" class="prompt-grid"></div>
+      <p class="empty-state" id="emptyState" hidden>پرامپتی پیدا نشد.</p>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> محمد احسنی</span><span>ساخته‌شده برای بازی و یادگیری</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/game.js"></script>
+  <script src="js/prompts.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
